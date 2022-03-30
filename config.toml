@@ -1,5 +1,4 @@
 baseURL = 'http://chinny.github.io/'
 languageCode = 'en-us'
 title = 'Jeffrey Chin'
-theme = "ananke"
 theme = "toha"
