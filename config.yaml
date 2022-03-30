@@ -1,0 +1,7 @@
+baseURL: 'http://chinny.github.io/'
+languageCode: 'en-us'
+title: 'Jeffrey Chin'
+theme: "toha"
+enableBlogPost: true
+newsletter:
+  enable: false
