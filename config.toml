@@ -5,18 +5,15 @@ theme = 'hugo-theme-shell'
 
 [Params]
   # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
-  description = "Jane Doe's Portfolio!"
+  description = "Jeffrey Chin's Portfolio!"
+
   [Params.Terminal]
-  # Note: color scheme
-  # Note: You can choose between
-  # Note: hugo-theme-shell original: ["shell-powershell", "shell-ubuntu", "shell-retro"]
-  # Note: or
   # Note: gogh theme: https://mayccoll.github.io/Gogh/
-  scheme = "Molokai"
+  scheme = "Misterioso"
 
   # Note: in terminal
   # [userName]@[pcName]:~/$ cd [workDir]
-  # [userName]@[pcName]:~/[workDir]$ cat [profile]
+  # [userName]@[pcName]:~/[workDir]$ cat derp [profile]
   #
   # [description]
   #
@@ -66,9 +63,6 @@ theme = 'hugo-theme-shell'
   folderName = "my_activity"
   # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
   files = [ 
-    ["C/C++", "https://www.example.com/"],
-    ["Python", "https://www.example.com/"],
-    ["Go", "https://golang.org/"],
-    ["Hugo", "/posts/hello-world.md"],
-    ["Docker", "/posts/hello-world.md"],
+    ["linkedin", "https://www.linkedin.com/in/jeffreylapyanchin/"],
+    ["hello world", "/posts/hello-world.md"],
   ]
