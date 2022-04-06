@@ -7,6 +7,13 @@ theme = 'hugo-theme-shell'
   # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
   description = "Jeffrey Chin's Portfolio!"
 
+  [Params.Navbar]
+  use = false
+  
+  [Params.Extensions]
+  use = false
+  ext = ".txt" # extension to add after single page
+
   [Params.Terminal]
   # Note: gogh theme: https://mayccoll.github.io/Gogh/
   scheme = "Misterioso"
