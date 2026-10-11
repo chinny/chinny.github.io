@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chinny's Homepage</title>
+<meta name="description" content="Chinny's corner of the web: games, tools and projects.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <h1 class="title">Chinny</h1>
+  <p class="sub">Check out <a href="https://chinny.github.io/arcade/">my arcade</a> today!</p>
+
+  <p class="body">Hello there. Well, this is my website.</p>
+
+  <p class="music">
+    <audio id="bgm" src="music.mp3" loop preload="none" controls></audio>
+  </p>
+
+  <hr>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">My Projects</h2>
+    <hr class="short">
+    <ul class="projects">
+      <li>
+        <a href="https://chinny.github.io/arcade/">Chinny's Arcade</a>
+        <p>Experimental browser games made with Claude: voxel worlds, space exploration, a kaiju rampage, PS1-style horror and more.</p>
+        <p class="links"><a href="https://github.com/chinny/arcade">source</a></p>
+      </li>
+      <li>
+        <a href="https://chinny.github.io/math/">Math Drill</a>
+        <p>Practice addition, subtraction, multiplication and division, and print worksheets.</p>
+        <p class="links"><a href="https://github.com/chinny/math">source</a></p>
+      </li>
+      <li>
+        <a href="https://chinny.github.io/goldberry/">Goldberry</a>
+        <p>A self-hosted allowance tracker for kids. Parents add money with a comment; kids see their jars and ask for more.</p>
+        <p class="links"><a href="https://github.com/chinny/goldberry">source</a></p>
+      </li>
+      <li>
+        <a href="https://phomv.github.io/">phomv</a>
+        <p>A command-line tool that organizes photos into date-based folders using EXIF metadata.</p>
+        <p class="links"><a href="https://github.com/phomv/phomv">source</a></p>
+      </li>
+      <li>
+        <a href="https://github.com/copperkeep/copperkeep">Copperkeep</a>
+        <p>A self-hosted, browser-based platform for teaching programming. All code runs client-side in WebAssembly.</p>
+        <p class="links"><a href="https://github.com/copperkeep">github org</a></p>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var a = document.getElementById("bgm");
+  if (!a) return;
+  a.removeAttribute("controls");
+  var b = document.createElement("button");
+  b.type = "button";
+  function label() { b.textContent = a.paused ? "\u266A Play music" : "\u266A Stop music"; }
+  b.addEventListener("click", function () { if (a.paused) { a.play(); } else { a.pause(); } });
+  a.addEventListener("play", label);
+  a.addEventListener("pause", label);
+  a.parentNode.appendChild(b);
+  label();
+})();
+</script>
+
+</body>
+</html>
