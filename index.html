@@ -15,21 +15,9 @@
 
   <p class="body">Hello there. Well, this is my website.</p>
 
-  <hr>
-
-  <h2>Updates</h2>
-  <hr class="short">
-
-  <p>My page is up but still under construction.<br>Please check back for updates.<br>(10/11/26)</p>
-  <p>I will probably put my resume and credentials up soon.<br>(10/11/26)</p>
-
-  <hr>
-
-  <nav aria-label="Main">
-    <p><a href="#projects">My Projects</a></p>
-    <p><a href="#experience">My Experience</a></p>
-    <p><a href="#contact">Contact</a></p>
-  </nav>
+  <p class="music">
+    <audio id="bgm" src="music.mp3" loop preload="none" controls></audio>
+  </p>
 
   <hr>
 
@@ -65,22 +53,23 @@
     </ul>
   </section>
 
-  <hr>
-
-  <section aria-labelledby="experience">
-    <h2 id="experience">My Experience</h2>
-    <hr class="short">
-    <p>Coming soon!<br>Resume and credentials.</p>
-  </section>
-
-  <hr>
-
-  <section aria-labelledby="contact">
-    <h2 id="contact">Contact</h2>
-    <hr class="short">
-    <p><a href="https://github.com/chinny">github.com/chinny</a></p>
-  </section>
 </main>
+
+<script>
+(function () {
+  var a = document.getElementById("bgm");
+  if (!a) return;
+  a.removeAttribute("controls");
+  var b = document.createElement("button");
+  b.type = "button";
+  function label() { b.textContent = a.paused ? "\u266A Play music" : "\u266A Stop music"; }
+  b.addEventListener("click", function () { if (a.paused) { a.play(); } else { a.pause(); } });
+  a.addEventListener("play", label);
+  a.addEventListener("pause", label);
+  a.parentNode.appendChild(b);
+  label();
+})();
+</script>
 
 </body>
 </html>
